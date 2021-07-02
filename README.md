@@ -22,4 +22,4 @@ THEN the saved events persist
 
 Github URL: https://github.com/dthompasionas/scheduler
 
-Deployed URL:
+Deployed URL: https://dthompasionas.github.io/scheduler/
