@@ -20,6 +20,6 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-Github URL:
+Github URL: https://github.com/dthompasionas/scheduler
 
 Deployed URL:
