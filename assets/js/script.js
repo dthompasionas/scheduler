@@ -6,7 +6,7 @@
 let userData;
 
 //*stored text for get item in local storage.
-let storedData = localStorage.getItem(['hour-9', 'hour-10', 'hour-11', 'hour-12', 'hour-13', 'hour-14', 'hour-15', 'hour-16', 'hour-17']);
+//let storedData = localStorage.getItem(['hour-9', 'hour-10', 'hour-11', 'hour-12', 'hour-13', 'hour-14', 'hour-15', 'hour-16', 'hour-17']);
 
 $(document).ready(function () {
 
@@ -46,14 +46,15 @@ $(document).ready(function () {
         let timeNow = moment().format('HH');
        
         
-        let selected = parseInt($(this).attr('id'));
-
+        let selected = $(this).attr('id');
+        console.log($(this).attr('id'));
         //*if the time hasn't arrived
-        if (selected > timeNow) {
+        const currentHour = selected.split('-') [1];
+        if (currentHour > timeNow) {
             //*display green
             $(this).addClass('future');
         //*if time is equal to now
-        } else if (selected == timeNow) {
+        } else if (currentHour == timeNow) {
             //*display red
             $(this).addClass('present');
         //*if time has passed
@@ -62,9 +63,9 @@ $(document).ready(function () {
             $(this).addClass('past');
 
         }
-        
-        $('id' + selected).append(localStorage.getItem(selected));
-        
+        console.log(selected);
+        $('#' + selected).append(localStorage.getItem(selected));
+
         
         
         
