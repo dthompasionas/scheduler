@@ -63,11 +63,16 @@ $(document).ready(function () {
 
         }
         
-        //$('#' + selected).append(localStorage.getItem(selected));
+        $('id' + selected).append(localStorage.getItem(selected));
         
-        if (storedData === true) {
-           // = storedData;
-        }
+        
+        
+        
+        
+        
+        
+        
+        
         
 
         
